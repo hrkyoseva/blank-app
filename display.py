@@ -208,7 +208,7 @@ if mode == "2-parameter comparison":
                 match = filtered[(filtered[row_param] == rv) & (filtered[col_param] == cv)]
                 if not match.empty:
                     img_path = match.iloc[0]["path"]
-                    row_cols[ci + 1].image(Image.open(img_path),  use_container_width=True)
+                    row_cols[ci + 1].image(Image.open(img_path),  width='stretch')
                     row_paths.append(img_path)
                 else:
                     row_cols[ci + 1].write("No image")
@@ -246,7 +246,7 @@ elif mode == "Free grid":
             match = filter_dataframe(df, filters)
             if not match.empty:
                 img_path = match.iloc[0]["path"]
-                row_cols[c].image(Image.open(img_path),  use_container_width=True,
+                row_cols[c].image(Image.open(img_path),  width='stretch',
                                   caption=f"[Edit params](#cell{r}_{c})")
                 row_paths.append(img_path)
             else:
