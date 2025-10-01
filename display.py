@@ -5,8 +5,9 @@ from PIL import Image, ImageDraw, ImageFont
 import io
 
 # -------- SETTINGS --------
-ROOT_DIR = os.path.dirname(__file__)+'/'  # change to your folder root
-
+#ROOT_DIR = os.path.dirname(__file__)+"/"  # change to your folder root
+#ROOT_DIR = '/workspaces/blank-app/'
+ROOT_DIR=os.path.abspath(os.path.dirname(__file__))
 
 # -------- HELPER FUNCTIONS --------
 def collect_images(root_dir, use_raw):
