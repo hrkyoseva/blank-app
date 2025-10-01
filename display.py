@@ -5,7 +5,7 @@ from PIL import Image, ImageDraw, ImageFont
 import io
 
 # -------- SETTINGS --------
-ROOT_DIR = os.path.dirname(__file__)  # change to your folder root
+ROOT_DIR = os.path.dirname(__file__)+'/'  # change to your folder root
 
 
 # -------- HELPER FUNCTIONS --------
